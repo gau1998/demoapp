@@ -23,17 +23,17 @@ const ChangePassword=()=> {
     return (
         <div>
             <form onSubmit={handleSubmit} className='abc'>
-            <div className="div">
+            <div className="from-group">
                 <h5>Old password</h5>
-                <input type="text" name='old_password'  onChange={handleInputChange} />
+                <input type="text" className='form-control' name='old_password'  onChange={handleInputChange} />
               </div>
-              <div className="div">
+              <div className="form-group">
                 <h5>New password</h5>
-                <input type="text" name='new_password'  onChange={handleInputChange} />
+                <input type="text" name='new_password'  className='form-control'  onChange={handleInputChange} />
               </div>
-              <div className="div">
+              <div className="form-group">
                 <h5>Confirm password</h5>
-                <input type="text" name='confirm_password'  onChange={handleInputChange} />
+                <input type="text" name='confirm_password'  className='form-control'  onChange={handleInputChange} />
               </div>
             
            <button className='btn btn-success'>ChangePassword</button>

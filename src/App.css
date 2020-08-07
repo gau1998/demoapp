@@ -62,13 +62,13 @@ form {
   position: relative;
   display: grid;
   grid-template-columns: 7% 93%;
-  margin: 25px 0;
+  margin: 20px 0;
   padding: 5px 0;
-  border-bottom: 2px solid #d9d9d9;
 }
 
-.login-content .input-div.one {
+.login-content .input-div.one .input-div.pass {
   margin-top: 0;
+  margin-right: 10px;
 }
 
 .i {
@@ -94,8 +94,18 @@ form {
   transform: translateY(-50%);
   color: #999;
   font-size: 18px;
-  transition: 0.3s;
+  transition: 0.5s;
 }
+.input-div > div > label {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #999;
+  font-size: 18px;
+  transition: 0.5s;
+}
+
 
 .input-div:before,
 .input-div:after {
@@ -110,7 +120,10 @@ form {
 .abc{
 	margin-left: 500px;
 	display: flex-box;
-	position: relative;
+  position: relative;
+  align-items: center;
+  padding-top: 50px;
+  
 	
 	
 }
@@ -151,6 +164,9 @@ form {
   color: #555;
   font-family: "poppins", sans-serif;
 }
+.don{
+  margin-left: 10px;
+}
 
 .input-div.pass {
   margin-bottom: 4px;
@@ -183,6 +199,7 @@ a:hover {
   font-family: "Poppins", sans-serif;
   text-transform: uppercase;
   margin: 1rem 0;
+  margin-left: 5px;
   cursor: pointer;
   transition: 0.5s;
 }
@@ -228,4 +245,13 @@ a:hover {
   .login-content {
     justify-content: center;
   }
+}
+
+
+.not_found{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+
+  transform: translate(-50%, -50%);
 }

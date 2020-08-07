@@ -35,7 +35,7 @@ export async function getLogin(username, password) {
             } else {
                 console.log("error");
             }
-            window.location.href =  "/home/";
+            window.location.href =  "/logic/"; 
             resolve(response.json());
             
         })
@@ -77,6 +77,7 @@ export async function Signup(product) {
                 timer: 4000,
             });
             }
+            window.location.href =  "/";
             resolve(response.json());
         })
         .catch((reject) => {
@@ -115,6 +116,7 @@ export async function forgetPassword(product, email) {
                 timer: 2000,
             });
             }
+            window.location.href =  "/";
             resolve(response.json());
         })
         .catch((reject) => {
@@ -155,22 +157,24 @@ export async function changePassword(product) {
               timer: 2000,
             });
           }
-          window.location.href =  "/home/";
+          localStorage.setItem("Change", "Password");
+          window.location.href = "/home/";
           resolve(response.json());
         })
         .catch((error) => {
-          console.log(error.response);
           if (error.response) {
-            console.log(error.response);
-            console.log(error.response.data);
-            console.log(error.response.status);
-            console.log(error.response.headers);
-          } else if (error.request) {
-            console.log(error.request);
+            Swal.fire({
+              title: " Error !",
+              icon: "error",
+              text: error.response.data.old_password
+                ? "Old password " + error.response.data.old_password
+                : error.response.data.new_password,
+              timer: 2000,
+            });
+            console.log("Err", error.response.data);
           } else {
             console.log("Error", error.message);
           }
-          console.log(error.config);
         });
     });
     return country;

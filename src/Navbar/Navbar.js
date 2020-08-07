@@ -17,12 +17,7 @@ function Navbar() {
             </li>
            
           </ul>
-          <ul className="form-inline my-2 my-lg-0">
-              
-          <li className="nav-item abc ">
-              <Link className="nav-link" to="/changepassword"><botton classname='btn btn-success'>ChangePassword</botton> </Link>
-            </li>
-          </ul>
+         
         </div>
       </nav>
     )

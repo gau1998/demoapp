@@ -41,22 +41,22 @@ const Login =()=> {
             <img src={avatar} alt='avatar' />
             <h2 className="title">Welcome</h2>
             
-            <div className="input-div one">
+            <div className="input-div pass">
               <div className="i">
                 <i className="fas fa-user" />
               </div>
-              <div className="div">
-                <h5>Username</h5>
-                <input type="text" name='username'  onChange={handleInputChange} />
+              <div className="form-group">
+                
+                <input type="text" name='username' className='form-control' placeholder='username'  onChange={handleInputChange} />
               </div>
             </div>
             <div className="input-div pass">
               <div className="i">
                 <i className="fas fa-lock" />
               </div>
-              <div className="div">
-                <h5>Password</h5>
-                <input type="password" name='password'  onChange={handleInputChange} />
+              <div className="form-group">
+            
+                <input type="password" name='password' className='form-control' placeholder='Password' onChange={handleInputChange} />
               </div>
             </div>
             <Link to="/forgetPassword">Forgot Password?</Link>
