@@ -9,6 +9,7 @@ import forgetPassword from "./Layout/ForgetPassword";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import ChangePassword from "./Layout/ChangePassword";
 import Logic from "./components/Logic";
+import NotFounnd from "./components/NotFound";
 
 const PrivateRoute = ({ component: Component, ...props }) => {
   return (
@@ -38,9 +39,12 @@ function App() {
         <Route exact path="/" component={login} />
         <Route path="/register" component={register} />
         <Route path="/forgetpassword" component={forgetPassword} />
-        <Route path='/logic/' component={Logic}/>
+        <Route path="/logic/" component={Logic} />
+
         <PrivateRoute path="/changepassword/" component={ChangePassword} />
         <PrivateRoute path="/home/" component={Home} />
+        <Route path="/404" component={NotFounnd} />
+        <Redirect to="/404" />
       </Switch>
     </Router>
   );
